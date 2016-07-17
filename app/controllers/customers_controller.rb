@@ -5,34 +5,14 @@ class CustomersController < ApplicationController
     if current_user.nil?
       redirect_to root_path
     end
-    unless current_user['_source']['info'].key? 'address'
-      current_user['_source']['info']['address'] = '';
-    end
-    unless current_user['_source']['info'].key? 'address'
-      current_user['_source']['info']['city'] = '';
-    end
-    unless current_user['_source']['info'].key? 'address'
-      current_user['_source']['info']['province'] = '';
-    end
-    unless current_user['_source']['info'].key? 'address'
-      current_user['_source']['info']['phone'] = '';
-    end
-    unless current_user['_source']['info'].key? 'address'
-      current_user['_source']['info']['email_account'] = '';
-    end
+    arr = %w(address province phone city email_account)
+    arr.each { |item| current_user['_source']['info'][item] = '' unless current_user['_source']['info'].key? item }
   end
 
   def change_info
-    current_user['_source']['info'] =
-        {
-            'name': params['fullname'],
-            'address': params['address'],
-            'city': params['city'],
-            'province': params['province'],
-            'phone': params['phone'],
-            'email_account': params['email_account']
-        }
-    # p current_user
+    arr = %w(address province phone city email_account)
+    arr.each { |item| current_user['_source']['info'][item] = params[item] }
+    current_user['_source']['info']['name'] = params['fullname']
     UserSearch.update current_user
     flash[:success] = 'Your account details has been changed!'
     redirect_to customers_index_path

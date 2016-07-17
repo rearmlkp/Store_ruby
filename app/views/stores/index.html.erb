@@ -196,16 +196,16 @@ _________________________________________________________ -->
           <div class="col-md-4 col-sm-6">
             <div class="product">
               <div class="image">
-                <a href="shop-detail.html">
-                  <img src="/img/product1.jpg" alt="" class="img-responsive image1">
-                </a>
+                <%= link_to details_path(1), :query => 1 do %>
+                    <img src="/img/product1.jpg" alt="" class="img-responsive image1">
+                <% end %>
               </div>
               <!-- /.image -->
               <div class="text">
-                <h3><a href="shop-detail.html">Fur coat with very but very very long name</a></h3>
+                <h3><%= link_to 'Fur coat with very but very very long name', details_path(1), :query => 1 %></h3>
                 <p class="price">$143.00</p>
                 <p class="buttons">
-                  <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                  <%= link_to 'View detail', details_path(1), class: 'btn btn-default' %>
                   <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to
                     cart</a>
                 </p>
@@ -218,9 +218,9 @@ _________________________________________________________ -->
           <div class="col-md-4 col-sm-6">
             <div class="product">
               <div class="image">
-                <a href="shop-detail.html">
-                  <img src="/img/product2.jpg" alt="" class="img-responsive image1">
-                </a>
+                <%= link_to details_path(1) do %>
+                    <img src="/img/product2.jpg" alt="" class="img-responsive image1">
+                <% end %>
               </div>
               <!-- /.image -->
               <div class="text">
@@ -230,7 +230,7 @@ _________________________________________________________ -->
                   $143.00
                 </p>
                 <p class="buttons">
-                  <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                  <%= link_to 'View detail', details_path(1), class: 'btn btn-default' %>
                   <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to
                     cart</a>
                 </p>
@@ -264,7 +264,7 @@ _________________________________________________________ -->
                 <h3><a href="shop-detail.html">Black Blouse Versace</a></h3>
                 <p class="price">$143.00</p>
                 <p class="buttons">
-                  <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                  <%= link_to 'View detail', details_path(1), class: 'btn btn-default' %>
                   <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to
                     cart</a>
                 </p>
@@ -287,7 +287,7 @@ _________________________________________________________ -->
                 <h3><a href="shop-detail.html">Black Blouse Versace</a></h3>
                 <p class="price">$143.00</p>
                 <p class="buttons">
-                  <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                  <%= link_to 'View detail', details_path(1), class: 'btn btn-default' %>
                   <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to
                     cart</a>
                 </p>
@@ -310,7 +310,7 @@ _________________________________________________________ -->
                 <h3><a href="shop-detail.html">White Blouse Versace</a></h3>
                 <p class="price">$143.00</p>
                 <p class="buttons">
-                  <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                  <%= link_to 'View detail', details_path(1), class: 'btn btn-default' %>
                   <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to
                     cart</a>
                 </p>
@@ -339,7 +339,7 @@ _________________________________________________________ -->
                 <h3><a href="shop-detail.html">Fur coat</a></h3>
                 <p class="price">$143.00</p>
                 <p class="buttons">
-                  <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                  <%= link_to 'View detail', details_path(1), class: 'btn btn-default' %>
                   <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to
                     cart</a>
                 </p>

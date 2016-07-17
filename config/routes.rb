@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'carts/index'
+
+  get 'carts/update'
+
+  post 'searchs/search'
+
+  get 'searchs/index'
+
+  get 'stores/details/:id', to: 'stores#details', as: 'details'
+
   get 'customers/index'
 
   get 'contacts/index'

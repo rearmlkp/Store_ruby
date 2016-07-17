@@ -7,7 +7,7 @@
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Universal - All In 1 Template</title>
+  <title>My Store</title>
 
   <meta name="keywords" content="">
 
@@ -375,26 +375,45 @@ _________________________________________________________ -->
 
             <!--</ul>-->
           </li>
+          <li>
+            <%= form_tag searchs_search_path, class: 'navbar-form', method: :post do %>
+                <div class="input-group">
+                  <input type="text" id="querystring" name="querystring" class="form-control" placeholder="Search">
+                                    <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+                </span>
+                </div>
+            <% end %>
+          </li>
+          <% if current_user %>
+              <li>
+                <%= link_to carts_index_path do %>
+                    Total: 420$<i class="fa fa-shopping-cart" style="font-size: larger"></i>
+                <% end %>
+              </li>
+          <% end %>
         </ul>
 
       </div>
       <!--/.nav-collapse -->
 
 
-      <div class="collapse clearfix" id="search">
+      <!--<div class="collapse clearfix" id="search">-->
 
-        <form class="navbar-form" role="search">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search">
-                                    <span class="input-group-btn">
+      <!--<form class="navbar-form" role="search">-->
+      <!--<div class="input-group">-->
+      <!--<input type="text" class="form-control" placeholder="Search">-->
+      <!--<span class="input-group-btn">-->
 
-                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+      <!--<button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>-->
 
-                </span>
-          </div>
-        </form>
+      <!--</span>-->
+      <!--</div>-->
+      <!--</form>-->
 
-      </div>
+      <!--</div>-->
       <!--/.nav-collapse -->
 
     </div>
@@ -468,14 +487,14 @@ _________________________________________________________ -->
 _________________________________________________________ -->
 
 <!--<div id="get-it">-->
-  <!--<div class="container">-->
-    <!--<div class="col-md-8 col-sm-12">-->
-      <!--<h3>Do you want cool website like this one?</h3>-->
-    <!--</div>-->
-    <!--<div class="col-md-4 col-sm-12">-->
-      <!--<a href="#" class="btn btn-template-transparent-primary">Buy this template now</a>-->
-    <!--</div>-->
-  <!--</div>-->
+<!--<div class="container">-->
+<!--<div class="col-md-8 col-sm-12">-->
+<!--<h3>Do you want cool website like this one?</h3>-->
+<!--</div>-->
+<!--<div class="col-md-4 col-sm-12">-->
+<!--<a href="#" class="btn btn-template-transparent-primary">Buy this template now</a>-->
+<!--</div>-->
+<!--</div>-->
 <!--</div>-->
 
 

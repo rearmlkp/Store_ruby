@@ -1,7 +1,5 @@
 {
   "name": "dsl-generated dependencies",
   "dependencies": {
-    "bootstrap-sass-official": "latest",
-    "components-font-awesome": "latest"
   }
 }

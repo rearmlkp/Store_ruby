@@ -6,4 +6,9 @@ class StoresControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get details" do
+    get stores_details_url
+    assert_response :success
+  end
+
 end
