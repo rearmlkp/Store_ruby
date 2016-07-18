@@ -1,0 +1,73 @@
+<% if /^(5[0-9]{2})$/ =~ @exception.status.to_s %>
+
+
+    <div id="content">
+      <div class="container">
+
+        <div class="col-sm-6 col-sm-offset-3" id="error-page">
+
+          <div class="box">
+
+            <p class="text-center">
+              <%= link_to root_path do %>
+                  <img src="/img/logo.png" alt="Obaju template">
+              <% end %>
+            </p>
+
+            <h3>We are sorry - Internal error</h3>
+            <h4 class="text-muted"><%= @exception.status.to_s %> - <%= details[:name] %> </h4>
+            <h4>Our developers have been notified - we're working on it!</h4>
+
+            <p class="buttons">
+              <%= link_to root_path, class: 'btn btn-template-main' do %>
+                  <i class="fa fa-home"></i> Go to Homepage
+              <% end %>
+            </p>
+          </div>
+
+
+        </div>
+        <!-- /.col-sm-6 -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /#content -->
+
+<% else %>
+
+    <div id="content">
+      <div class="container">
+
+        <div class="col-sm-6 col-sm-offset-3" id="error-page">
+
+          <div class="box">
+
+            <p class="text-center">
+              <%= link_to root_path do %>
+                  <img src="/img/logo.png" alt="Obaju template">
+              <% end %>
+            </p>
+
+            <!--<h3>We are sorry - Internal error</h3>-->
+            <!--<h4 class="text-muted"><%= @exception.status.to_s %> - <%= details[:name] %> </h4>-->
+            <!--<h4>Our developers have been notified - we're working on it!</h4>-->
+
+            <h3>We are sorry - this page is not here anymore</h3>
+            <h4 class="text-muted"><%= @exception.status.to_s %> - <%= details[:name] %> </h4>
+
+            <p class="buttons">
+              <%= link_to root_path, class: 'btn btn-template-main' do %>
+                  <i class="fa fa-home"></i> Go to Homepage
+              <% end %>
+            </p>
+          </div>
+
+
+        </div>
+        <!-- /.col-sm-6 -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /#content -->
+
+<% end %>

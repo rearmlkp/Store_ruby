@@ -29,78 +29,76 @@
 
         <div class="box">
 
-          <form method="post" action="shop-checkout1.html">
+          <%= form_tag checkout_step1_path, method: :get do %>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th colspan="2">Product</th>
+                    <th>Quantity</th>
+                    <th>Unit price</th>
+                    <th>Discount</th>
+                    <th colspan="2">Total</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>
+                      <a href="#">
+                        <img src="/img/detailsquare.jpg" alt="White Blouse Armani">
+                      </a>
+                    </td>
+                    <td><a href="#">White Blouse Armani</a>
+                    </td>
+                    <td>
+                      <input type="number" value="2" class="form-control">
+                    </td>
+                    <td>$123.00</td>
+                    <td>$0.00</td>
+                    <td>$246.00</td>
+                    <td><a href="#"><i class="fa fa-trash-o"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#">
+                        <img src="/img/basketsquare.jpg" alt="Black Blouse Armani">
+                      </a>
+                    </td>
+                    <td><a href="#">Black Blouse Armani</a>
+                    </td>
+                    <td>
+                      <input type="number" value="1" class="form-control">
+                    </td>
+                    <td>$200.00</td>
+                    <td>$0.00</td>
+                    <td>$200.00</td>
+                    <td><a href="#"><i class="fa fa-trash-o"></i></a>
+                    </td>
+                  </tr>
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th colspan="5">Total</th>
+                    <th colspan="2">$446.00</th>
+                  </tr>
+                  </tfoot>
+                </table>
 
-            <div class="table-responsive">
-              <table class="table">
-                <thead>
-                <tr>
-                  <th colspan="2">Product</th>
-                  <th>Quantity</th>
-                  <th>Unit price</th>
-                  <th>Discount</th>
-                  <th colspan="2">Total</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>
-                    <a href="#">
-                      <img src="/img/detailsquare.jpg" alt="White Blouse Armani">
-                    </a>
-                  </td>
-                  <td><a href="#">White Blouse Armani</a>
-                  </td>
-                  <td>
-                    <input type="number" value="2" class="form-control">
-                  </td>
-                  <td>$123.00</td>
-                  <td>$0.00</td>
-                  <td>$246.00</td>
-                  <td><a href="#"><i class="fa fa-trash-o"></i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="#">
-                      <img src="/img/basketsquare.jpg" alt="Black Blouse Armani">
-                    </a>
-                  </td>
-                  <td><a href="#">Black Blouse Armani</a>
-                  </td>
-                  <td>
-                    <input type="number" value="1" class="form-control">
-                  </td>
-                  <td>$200.00</td>
-                  <td>$0.00</td>
-                  <td>$200.00</td>
-                  <td><a href="#"><i class="fa fa-trash-o"></i></a>
-                  </td>
-                </tr>
-                </tbody>
-                <tfoot>
-                <tr>
-                  <th colspan="5">Total</th>
-                  <th colspan="2">$446.00</th>
-                </tr>
-                </tfoot>
-              </table>
-
-            </div>
-            <!-- /.table-responsive -->
-
-            <div class="box-footer">
-              <div class="pull-left">
-                <a href="shop-category.html" class="btn btn-default"><i class="fa fa-chevron-left"></i> Continue shopping</a>
               </div>
-              <div class="pull-right">
-                <button class="btn btn-default"><i class="fa fa-refresh"></i> Update cart</button>
-                <button type="submit" class="btn btn-template-main">Proceed to checkout <i class="fa fa-chevron-right"></i>
-                </button>
-              </div>
-            </div>
+              <!-- /.table-responsive -->
 
-          </form>
+              <div class="box-footer">
+                <div class="pull-left">
+                  <a href="shop-category.html" class="btn btn-default"><i class="fa fa-chevron-left"></i> Continue shopping</a>
+                </div>
+                <div class="pull-right">
+                  <button class="btn btn-default"><i class="fa fa-refresh"></i> Update cart</button>
+                  <button type="submit" class="btn btn-template-main">Proceed to checkout <i class="fa fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+          <% end %>
 
         </div>
         <!-- /.box -->

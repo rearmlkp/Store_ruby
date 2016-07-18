@@ -83,4 +83,29 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.exception_handler = {
+      dev:    false, #-> defaults to "false" for dev mode
+      db:     false, #-> defaults to :errors if true, else input "table_name" as string
+      email:  false, #-> need to integrate
+      social: {
+          :facebook   =>  'frontline.utilities', #-> Facebook handle
+          :twitter    =>  'frontlineutils',      #-> Twitter handle
+          :youtube    =>  'frontlineutils',      #-> YouTube handle
+          :linkedin   =>  'frontline-utilities', #-> LinkedIn handle
+          :fusion     =>   'frontlineutils',     #-> Fusion handle
+          :url => {
+              :facebook   =>  'https://facebook.com',          #-> no need to edit
+              :twitter    =>  'http://twitter.com',            #-> no need to edit
+              :youtube    =>  'https://youtube.com/user',      #-> no need to edit
+              :linkedin   =>  'https://linkedin.com/company',  #-> no need to edit
+              :fusion     =>  'https://frontlinefusion.com',   #-> no need to edit
+          },
+      },
+      layouts: {
+          '404' => 'exception', #-> 404 Callback (needs improving big time) Use the following: '404' => <<-EOF redirect_to root_url, notice: "Hello" EOF
+          '400' => 'exception', #-> layout for 400 error code (404 should only be used as response)
+          '500' => 'exception'
+      },
+  }
 end

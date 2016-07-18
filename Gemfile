@@ -53,3 +53,5 @@ gem 'elasticsearch'
 gem 'elasticsearch-api'
 
 gem 'omniauth-google-oauth2'
+
+gem 'exception_handler', '~> 0.5.0' #-> Gemfile

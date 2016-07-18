@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
 
+  get 'checkout/step1'
+
+  post 'checkout/check_s1', to: 'checkout#check_s1', as: 'check_s1'
+
+  get 'checkout/step2'
+
+  post 'checkout/check_s2', to: 'checkout#check_s2', as: 'check_s2'
+
+  get 'checkout/step3'
+
+  post 'checkout/check_s3', to: 'checkout#check_s3', as: 'check_s3'
+
+  get 'checkout/step4'
+
+  post 'checkout/check_s4', to: 'checkout#check_s4', as: 'check_s4'
+
   get 'carts/index'
 
   get 'carts/update'
